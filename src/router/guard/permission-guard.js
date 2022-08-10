@@ -1,6 +1,5 @@
 import { useUserStore } from '@/store/modules/user'
 import { usePermissionStore } from '@/store/modules/permission'
-import { NOT_FOUND_ROUTE } from '@/router/routes'
 import { getToken, refreshAccessToken, removeToken } from '@/utils/token'
 import { toLogin } from '@/utils/auth'
 import { isNullOrWhitespace } from '@/utils/is'
@@ -36,7 +35,6 @@ export function createPermissionGuard(router) {
     accessRoutes.forEach((route) => {
       !router.hasRoute(route.name) && router.addRoute(route)
     })
-    router.addRoute(NOT_FOUND_ROUTE)
     return { ...to, replace: true }
   })
 }
