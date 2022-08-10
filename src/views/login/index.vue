@@ -46,15 +46,15 @@
 </template>
 
 <script setup>
-import { lStorage } from '@/utils/cache'
-import { setToken } from '@/utils/token'
-import { useStorage } from '@vueuse/core'
-import bgImg from '../../assets/svgs/login_banner.svg'
-import logo from "../../assets/icons/logo.svg"
+import { lStorage } from '@/utils/cache';
+import { setToken } from '@/utils/token';
+import { useStorage } from '@vueuse/core';
+import bgImg from '../../assets/svgs/login_banner.svg';
+import logo from "../../assets/icons/logo.svg";
 
-import api from './api'
+import api from './api';
 
-const title = import.meta.env.VITE_APP_TITLE
+const title = import.meta.env.VITE_APP_TITLE;
 
 const router = useRouter()
 const { query } = useRoute()

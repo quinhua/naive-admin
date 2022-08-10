@@ -1,12 +1,5 @@
 export const basicRoutes = [
   {
-    name: '404',
-    path: '/404',
-    component: () => import('@/views/error-page/404.vue'),
-    isHidden: true,
-  },
-
-  {
     name: 'Login',
     path: '/login',
     component: () => import('@/views/login/index.vue'),
@@ -16,13 +9,6 @@ export const basicRoutes = [
     },
   }
 ]
-
-export const NOT_FOUND_ROUTE = {
-  name: 'NotFound',
-  path: '/:pathMatch(.*)*',
-  redirect: '/404',
-  isHidden: true,
-}
 
 const modules = import.meta.globEager('@/views/**/route.js')
 const asyncRoutes = []
